@@ -2,9 +2,36 @@ version: '3.1'
 services:
   rabbitmq:
     image: rabbitmq:3-management
+    container_name: rabbitmq
+    hostname: rabbitmq
     ports:
       - '5672:5672'
       - '15672:15672'
     environment:
       - RABBITMQ_DEFAULT_USER=hasanyelaldi
       - RABBITMQ_DEFAULT_PASS=123456
+      - RABBITMQ_ERLANG_COOKIE=cookie
+
+  rabbitmq2:
+    image: rabbitmq:3-management
+    container_name: rabbitmq2
+    hostname: rabbitmq2
+    ports:
+      - '5600:5672'
+      - '15600:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=hasanyelaldi
+      - RABBITMQ_DEFAULT_PASS=123456
+      - RABBITMQ_ERLANG_COOKIE=cookie
+
+  rabbitmq3:
+    image: rabbitmq:3-management
+    container_name: rabbitmq3
+    hostname: rabbitmq3
+    ports:
+      - '5700:5672'
+      - '15700:15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=hasanyelaldi
+      - RABBITMQ_DEFAULT_PASS=123456
+      - RABBITMQ_ERLANG_COOKIE=cookie

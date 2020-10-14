@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MessageController {
 
-  @Autowired
-  MessageService messageService;
+    @Autowired
+    MessageService messageService;
 
-  @PostMapping(value = "/send", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-  public ResponseEntity<String> sendMessage(@Valid @RequestBody Message message){
-    return ResponseEntity.ok(messageService.send(message));
-  }
+    @PostMapping(value = "/send", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<String> sendMessage(@Valid @RequestBody Message message) {
+        return ResponseEntity.ok(messageService.send(message));
+    }
 }

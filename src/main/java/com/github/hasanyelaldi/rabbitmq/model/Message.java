@@ -65,13 +65,4 @@ public class Message implements Serializable {
     this.receiverId = receiverId;
   }
 
-  @Override
-  public String toString() {
-    return "Message{" +
-        "id='" + id + '\'' +
-        ", createDate=" + createDate +
-        ", seen=" + seen +
-        ", message='" + messageInfo + '\'' +
-        '}';
-  }
 }
