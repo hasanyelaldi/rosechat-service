@@ -9,7 +9,7 @@ public class Message implements Serializable {
   private String id;
 
   private String userId;
-  private String arrivalUserId;
+  private String receiverId;
 
   private Date createDate;
   private Boolean seen;
@@ -57,12 +57,12 @@ public class Message implements Serializable {
     this.userId = userId;
   }
 
-  public String getArrivalUserId() {
-    return arrivalUserId;
+  public String getReceiverId() {
+    return receiverId;
   }
 
-  public void setArrivalUserId(String arrivalUserId) {
-    this.arrivalUserId = arrivalUserId;
+  public void setReceiverId(String receiverId) {
+    this.receiverId = receiverId;
   }
 
   @Override

@@ -20,7 +20,7 @@ public class MessageService {
     message.setMessageInfo(producerMessage.getMessageInfo());
     message.setSeen(Boolean.FALSE);
     message.setUserId(producerMessage.getUserId());
-    message.setArrivalUserId(producerMessage.getArrivalUserId());
+    message.setReceiverId(producerMessage.getReceiverId());
 
     producer.sendToQueue(message);
     return message.getId() + " Send";

@@ -14,7 +14,7 @@ public class NotificationListener {
 
   @RabbitListener(queues = "rabbit-queue")
   public void handleMessage(Message message){
-    logger.info("1 Message to " + message.getArrivalUserId() + " from " + message.getUserId());
+    logger.info("1 Message to " + message.getReceiverId() + " from " + message.getUserId());
     logger.info("Message :" + message.getMessageInfo());
   }
 
